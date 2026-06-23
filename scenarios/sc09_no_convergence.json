@@ -1,0 +1,80 @@
+{
+  "id": "SC09",
+  "title": "Ambiguous — No Clear Convergence (Whistleblower vs Audit)",
+  "type": "C",
+  "pattern": "no_convergence",
+  "hypothesis": "genuinely unclear — designed to keep p_forward near 0.5",
+  "events": {
+    "event_a": {
+      "id": "event_a",
+      "label": "The whistleblower filed the complaint",
+      "era": "Corporate Investigation"
+    },
+    "event_b": {
+      "id": "event_b",
+      "label": "The internal audit was initiated",
+      "era": "Corporate Investigation"
+    }
+  },
+  "expected_trajectory": [
+    0.5,
+    0.571,
+    0.5,
+    0.4403,
+    0.5,
+    0.518
+  ],
+  "expected_verdict": "ambiguous",
+  "expected_validator_flags": [
+    "missing_evidence",
+    "contradiction"
+  ],
+  "steps": [
+    {
+      "text": "HR records show a complaint was filed on October 4th.",
+      "supports_forward": true,
+      "strength": 0.65,
+      "source": "factual",
+      "source_weight": 1.1
+    },
+    {
+      "text": "The audit committee's minutes reference a pre-existing concern from September.",
+      "supports_forward": false,
+      "strength": 0.65,
+      "source": "factual",
+      "source_weight": 1.1
+    },
+    {
+      "text": "The complaint form references an ongoing audit, suggesting it came second.",
+      "supports_forward": false,
+      "strength": 0.6,
+      "source": "inference",
+      "source_weight": 1.0
+    },
+    {
+      "text": "However, the audit scope was formally expanded only after the complaint was reviewed.",
+      "supports_forward": true,
+      "strength": 0.6,
+      "source": "factual",
+      "source_weight": 1.0
+    },
+    {
+      "text": "Both processes appear to have been initiated within the same two-week window.",
+      "supports_forward": true,
+      "strength": 0.3,
+      "source": "inference",
+      "source_weight": 0.6
+    }
+  ],
+  "benchmark_meta": {
+    "trajectory_formula": "logit(p_t+1)=logit(p_t)+direction*strength*source_weight*learning_rate",
+    "learning_rate": 0.4,
+    "initial_p": 0.5,
+    "verdict_thresholds": {
+      "forward": ">0.65",
+      "backward": "<0.35",
+      "ambiguous": "otherwise"
+    },
+    "label_mode": "gold_manual_labels"
+  }
+}

@@ -1,0 +1,6 @@
+metric,value
+direction_accuracy,0.461538
+confidence_mae,0.211538
+verdict_accuracy,0.666667
+num_evaluated_steps,13
+num_evaluated_verdicts,3

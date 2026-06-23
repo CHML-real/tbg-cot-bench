@@ -1,0 +1,79 @@
+{
+  "id": "SC01",
+  "title": "Monotonic Convergence — Crime Report",
+  "type": "A",
+  "pattern": "monotonic_convergence",
+  "hypothesis": "event_a occurred before event_b",
+  "events": {
+    "event_a": {
+      "id": "event_a",
+      "label": "The witness reported the crime",
+      "era": "Crime Scene Investigation"
+    },
+    "event_b": {
+      "id": "event_b",
+      "label": "The suspect fled the scene",
+      "era": "Crime Scene Investigation"
+    }
+  },
+  "expected_trajectory": [
+    0.5,
+    0.6087,
+    0.7203,
+    0.7766,
+    0.8255,
+    0.8793
+  ],
+  "expected_verdict": "forward",
+  "expected_validator_flags": [
+    "overconfident_edge"
+  ],
+  "steps": [
+    {
+      "text": "The call log shows the witness dialed emergency services at 9:12 PM.",
+      "supports_forward": true,
+      "strength": 0.85,
+      "source": "factual",
+      "source_weight": 1.3
+    },
+    {
+      "text": "Security footage timestamps the suspect leaving at 9:17 PM.",
+      "supports_forward": true,
+      "strength": 0.9,
+      "source": "scientific",
+      "source_weight": 1.4
+    },
+    {
+      "text": "The witness stated she called before seeing anyone leave.",
+      "supports_forward": true,
+      "strength": 0.75,
+      "source": "testimony",
+      "source_weight": 1.0
+    },
+    {
+      "text": "There is no evidence suggesting the suspect fled before the call.",
+      "supports_forward": true,
+      "strength": 0.7,
+      "source": "inference",
+      "source_weight": 1.1
+    },
+    {
+      "text": "Therefore, the report clearly preceded the escape.",
+      "supports_forward": true,
+      "strength": 0.9,
+      "source": "inference",
+      "source_weight": 1.2
+    }
+  ],
+  "benchmark_meta": {
+    "trajectory_formula": "logit(p_t+1)=logit(p_t)+direction*strength*source_weight*learning_rate",
+    "learning_rate": 0.4,
+    "initial_p": 0.5,
+    "verdict_thresholds": {
+      "forward": ">0.65",
+      "backward": "<0.35",
+      "ambiguous": "otherwise"
+    },
+    "label_mode": "gold_manual_labels"
+  }
+}

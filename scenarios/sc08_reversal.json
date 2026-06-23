@@ -1,0 +1,79 @@
+{
+  "id": "SC08",
+  "title": "Reversal — Historical Manuscript vs Library",
+  "type": "B",
+  "pattern": "reversal",
+  "hypothesis": "event_a occurred before event_b (challenged by radiocarbon dating)",
+  "events": {
+    "event_a": {
+      "id": "event_a",
+      "label": "The manuscript was written",
+      "era": "Medieval Scholarship"
+    },
+    "event_b": {
+      "id": "event_b",
+      "label": "The library was established",
+      "era": "Medieval Scholarship"
+    }
+  },
+  "expected_trajectory": [
+    0.5,
+    0.5582,
+    0.4241,
+    0.327,
+    0.2631,
+    0.1815
+  ],
+  "expected_verdict": "backward",
+  "expected_validator_flags": [
+    "contradiction"
+  ],
+  "steps": [
+    {
+      "text": "The manuscript's colophon claims it was written before any formal library existed.",
+      "supports_forward": true,
+      "strength": 0.65,
+      "source": "testimony",
+      "source_weight": 0.9
+    },
+    {
+      "text": "Radiocarbon dating places the manuscript's vellum at 50 years after the library's founding charter.",
+      "supports_forward": false,
+      "strength": 0.9,
+      "source": "scientific",
+      "source_weight": 1.5
+    },
+    {
+      "text": "The library's founding records reference the manuscript as an existing acquisition.",
+      "supports_forward": false,
+      "strength": 0.8,
+      "source": "factual",
+      "source_weight": 1.3
+    },
+    {
+      "text": "The colophon may have been added later by a scribe attempting to establish provenance.",
+      "supports_forward": false,
+      "strength": 0.7,
+      "source": "inference",
+      "source_weight": 1.1
+    },
+    {
+      "text": "Scholarly consensus now dates the manuscript as post-foundation.",
+      "supports_forward": false,
+      "strength": 0.85,
+      "source": "academic",
+      "source_weight": 1.4
+    }
+  ],
+  "benchmark_meta": {
+    "trajectory_formula": "logit(p_t+1)=logit(p_t)+direction*strength*source_weight*learning_rate",
+    "learning_rate": 0.4,
+    "initial_p": 0.5,
+    "verdict_thresholds": {
+      "forward": ">0.65",
+      "backward": "<0.35",
+      "ambiguous": "otherwise"
+    },
+    "label_mode": "gold_manual_labels"
+  }
+}

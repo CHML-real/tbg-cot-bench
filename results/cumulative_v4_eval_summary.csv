@@ -1,0 +1,6 @@
+metric,value
+parse_success_rate,0.442308
+trajectory_verdict_accuracy,0.365385
+p_forward_mae,0.251398
+num_steps,52
+num_parsed_steps,23

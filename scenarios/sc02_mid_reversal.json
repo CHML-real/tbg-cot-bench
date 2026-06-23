@@ -1,0 +1,79 @@
+{
+  "id": "SC02",
+  "title": "Mid-Reasoning Reversal — Treaty vs Ceasefire",
+  "type": "B",
+  "pattern": "mid_reversal",
+  "hypothesis": "event_a occurred before event_b (challenged by historical evidence)",
+  "events": {
+    "event_a": {
+      "id": "event_a",
+      "label": "The treaty was signed",
+      "era": "Post-War Diplomacy"
+    },
+    "event_b": {
+      "id": "event_b",
+      "label": "The ceasefire was declared",
+      "era": "Post-War Diplomacy"
+    }
+  },
+  "expected_trajectory": [
+    0.5,
+    0.5582,
+    0.6374,
+    0.5369,
+    0.4354,
+    0.3682
+  ],
+  "expected_verdict": "ambiguous",
+  "expected_validator_flags": [
+    "contradiction"
+  ],
+  "steps": [
+    {
+      "text": "Diplomatic records suggest the treaty draft was finalized first.",
+      "supports_forward": true,
+      "strength": 0.65,
+      "source": "factual",
+      "source_weight": 0.9
+    },
+    {
+      "text": "The signing ceremony is documented as occurring on Day 3 of negotiations.",
+      "supports_forward": true,
+      "strength": 0.75,
+      "source": "factual",
+      "source_weight": 1.1
+    },
+    {
+      "text": "However, a ceasefire order was radioed to field commanders on Day 2.",
+      "supports_forward": false,
+      "strength": 0.8,
+      "source": "factual",
+      "source_weight": 1.3
+    },
+    {
+      "text": "The ceasefire took effect before the treaty was publicly ratified.",
+      "supports_forward": false,
+      "strength": 0.85,
+      "source": "factual",
+      "source_weight": 1.2
+    },
+    {
+      "text": "Formal signing may have post-dated the operational ceasefire.",
+      "supports_forward": false,
+      "strength": 0.7,
+      "source": "inference",
+      "source_weight": 1.0
+    }
+  ],
+  "benchmark_meta": {
+    "trajectory_formula": "logit(p_t+1)=logit(p_t)+direction*strength*source_weight*learning_rate",
+    "learning_rate": 0.4,
+    "initial_p": 0.5,
+    "verdict_thresholds": {
+      "forward": ">0.65",
+      "backward": "<0.35",
+      "ambiguous": "otherwise"
+    },
+    "label_mode": "gold_manual_labels"
+  }
+}

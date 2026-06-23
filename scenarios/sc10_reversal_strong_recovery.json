@@ -1,0 +1,87 @@
+{
+  "id": "SC10",
+  "title": "Reversal with Strong Recovery — Species Discovery vs Habitat Protection",
+  "type": "B",
+  "pattern": "reversal_strong_recovery",
+  "hypothesis": "event_a occurred before event_b (initially challenged, ultimately confirmed)",
+  "events": {
+    "event_a": {
+      "id": "event_a",
+      "label": "The species was formally discovered",
+      "era": "Ecological Records"
+    },
+    "event_b": {
+      "id": "event_b",
+      "label": "The habitat was designated as protected",
+      "era": "Ecological Records"
+    }
+  },
+  "expected_trajectory": [
+    0.5,
+    0.6025,
+    0.5339,
+    0.6215,
+    0.5847,
+    0.6938,
+    0.7835
+  ],
+  "expected_verdict": "forward",
+  "expected_validator_flags": [
+    "overconfident_edge"
+  ],
+  "steps": [
+    {
+      "text": "The species was formally described in a 1987 journal publication.",
+      "supports_forward": true,
+      "strength": 0.8,
+      "source": "academic",
+      "source_weight": 1.3
+    },
+    {
+      "text": "A protected area was gazetted in 1985 for an adjacent, related species.",
+      "supports_forward": false,
+      "strength": 0.7,
+      "source": "legal",
+      "source_weight": 1.0
+    },
+    {
+      "text": "The 1985 protection order did not include this species by name.",
+      "supports_forward": true,
+      "strength": 0.75,
+      "source": "legal",
+      "source_weight": 1.2
+    },
+    {
+      "text": "A 1983 field survey note informally documents the species before formal description.",
+      "supports_forward": false,
+      "strength": 0.55,
+      "source": "speculative",
+      "source_weight": 0.7
+    },
+    {
+      "text": "Formal taxonomic discovery requires peer-reviewed publication; the 1987 paper is definitive.",
+      "supports_forward": true,
+      "strength": 0.85,
+      "source": "academic",
+      "source_weight": 1.4
+    },
+    {
+      "text": "The protection designation for this specific species was updated in 1990.",
+      "supports_forward": true,
+      "strength": 0.9,
+      "source": "legal",
+      "source_weight": 1.3
+    }
+  ],
+  "benchmark_meta": {
+    "trajectory_formula": "logit(p_t+1)=logit(p_t)+direction*strength*source_weight*learning_rate",
+    "learning_rate": 0.4,
+    "initial_p": 0.5,
+    "verdict_thresholds": {
+      "forward": ">0.65",
+      "backward": "<0.35",
+      "ambiguous": "otherwise"
+    },
+    "label_mode": "gold_manual_labels"
+  }
+}

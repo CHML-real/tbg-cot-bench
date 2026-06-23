@@ -1,0 +1,53 @@
+scenario_id,step,parse_ok,gold_supports_forward,pred_supports_forward,direction_correct,gold_strength,pred_confidence,confidence_abs_error,evidence
+SC01,1,True,True,True,True,0.85,0.95,0.1,The call log shows the witness dialed emergency services at 9:12 PM.
+SC01,2,True,True,True,True,0.9,0.9570000000000001,0.057,Security footage timestamps the suspect leaving at 9:17 PM.
+SC01,3,True,True,True,True,0.75,0.95,0.2,The witness stated she called before seeing anyone leave.
+SC01,4,True,True,True,True,0.7,0.9,0.2,There is no evidence suggesting the suspect fled before the call.
+SC01,5,True,True,True,True,0.9,0.95,0.05,"Therefore, the report clearly preceded the escape."
+SC02,1,True,True,True,True,0.65,0.95,0.3,Diplomatic records suggest the treaty draft was finalized first.
+SC02,2,True,True,True,True,0.75,0.95,0.2,The signing ceremony is documented as occurring on Day 3 of negotiations.
+SC02,3,True,False,True,False,0.8,0.95,0.15,"However, a ceasefire order was radioed to field commanders on Day 2."
+SC02,4,True,False,True,False,0.85,0.9,0.05,The ceasefire took effect before the treaty was publicly ratified.
+SC02,5,True,False,True,False,0.7,0.95,0.25,Formal signing may have post-dated the operational ceasefire.
+SC03,1,True,True,True,True,0.7,0.9570000000000001,0.257,The royal chronicle records the king's death on the 14th.
+SC03,2,True,False,True,False,0.6,0.95,0.35,A rebel pamphlet dated the 12th suggests the uprising had already started.
+SC03,3,True,True,True,True,0.8,0.853,0.053,Court records confirm the king was present at council on the 13th.
+SC03,4,True,True,True,True,0.55,0.95,0.4,Some historians argue the pamphlet was post-dated as propaganda.
+SC03,5,True,True,True,True,0.75,0.95,0.2,The consensus in modern historiography places the death first.
+SC04,1,True,True,True,True,0.5,0.95,0.45,"Initial assumption: alarm triggers evacuation, so A before B."
+SC04,2,True,False,True,False,0.8,0.8,0.0,Staff interviews reveal the building manager ordered evacuation before the alarm sounded.
+SC04,3,True,False,True,False,0.85,0.95,0.1,The alarm system log shows a 4-minute delay from when smoke was detected.
+SC04,4,False,False,,False,0.9,0.5,0.4,Evacuation logs confirm staff were already exiting when the alarm activated.
+SC04,5,True,False,True,False,0.85,0.95,0.1,All evidence consistently places evacuation before the alarm.
+SC05,1,True,True,True,True,0.7,0.9,0.2,Patent filing records show the application was submitted in Q2.
+SC05,2,True,False,False,True,0.75,0.3,0.45,The competitor's product was demonstrated at a conference in Q1.
+SC05,3,True,True,True,True,0.65,0.95,0.3,"However, the patent was provisionally filed in Q4 of the prior year."
+SC05,4,True,True,True,True,0.4,0.95,0.55,"The product demo used a different algorithmic approach, making comparison uncertain."
+SC05,5,True,True,True,True,0.8,0.95,0.15,Legal filings in the subsequent dispute place the patent as prior art.
+SC05,6,True,False,True,False,0.7,0.95,0.25,"The opposing counsel contested this, citing the Q1 demo as public disclosure."
+SC06,1,True,True,True,True,0.6,0.95,0.35,The patient's chart shows a formal diagnosis on March 3rd.
+SC06,2,True,False,True,False,0.85,0.95,0.1,The first symptom entry in the records is dated February 28th.
+SC06,3,True,False,True,False,0.9,0.0,0.9,Symptoms clearly preceded the formal diagnosis by several days.
+SC06,4,True,False,True,False,0.65,0.8,0.15,A retrospective note suggests early signs may have been missed initially.
+SC06,5,True,True,True,True,0.35,0.85,0.5,The diagnosis date is administrative and may not reflect actual clinical recognition.
+SC07,1,True,True,True,True,0.85,0.95,0.1,The Codex of Origins states the Rift preceded all Sentinel records.
+SC07,2,True,True,True,True,0.8,1.0,0.2,Sentinel creation rituals explicitly reference the world after the Rift.
+SC07,3,True,True,True,True,0.75,0.95,0.2,No Sentinel lineage predates the Rift opening in any official lore.
+SC07,4,True,False,False,True,0.4,0.75,0.35,"Fan wikis speculate a proto-Sentinel existed, but this is unconfirmed."
+SC07,5,True,True,True,True,0.9,0.95,0.05,Official sources unanimously place the Rift as the originating event.
+SC08,1,True,True,True,True,0.65,0.95,0.3,The manuscript's colophon claims it was written before any formal library existed.
+SC08,2,True,False,True,False,0.9,0.95,0.05,Radiocarbon dating places the manuscript's vellum at 50 years after the library's founding charter.
+SC08,3,True,False,True,False,0.8,0.95,0.15,The library's founding records reference the manuscript as an existing acquisition.
+SC08,4,True,False,True,False,0.7,0.95,0.25,The colophon may have been added later by a scribe attempting to establish provenance.
+SC08,5,True,False,True,False,0.85,0.85,0.0,Scholarly consensus now dates the manuscript as post-foundation.
+SC09,1,True,True,True,True,0.65,0.95,0.3,HR records show a complaint was filed on October 4th.
+SC09,2,False,False,,False,0.65,0.5,0.15,The audit committee's minutes reference a pre-existing concern from September.
+SC09,3,True,False,False,True,0.6,0.9,0.3,"The complaint form references an ongoing audit, suggesting it came second."
+SC09,4,True,True,True,True,0.6,0.95,0.35,"However, the audit scope was formally expanded only after the complaint was reviewed."
+SC09,5,True,True,False,False,0.3,0.5,0.2,Both processes appear to have been initiated within the same two-week window.
+SC10,1,True,True,True,True,0.8,0.95,0.15,The species was formally described in a 1987 journal publication.
+SC10,2,True,False,True,False,0.7,0.8,0.1,"A protected area was gazetted in 1985 for an adjacent, related species."
+SC10,3,True,True,True,True,0.75,0.95,0.2,The 1985 protection order did not include this species by name.
+SC10,4,True,False,False,True,0.55,0.9,0.35,A 1983 field survey note informally documents the species before formal description.
+SC10,5,True,True,True,True,0.85,0.95,0.1,Formal taxonomic discovery requires peer-reviewed publication; the 1987 paper is definitive.
+SC10,6,True,True,True,True,0.9,0.95,0.05,The protection designation for this specific species was updated in 1990.

@@ -1,0 +1,8 @@
+metric,value
+parse_success_rate,0.961538
+direction_accuracy,0.66
+confidence_mae,0.22234
+verdict_accuracy,0.5
+num_all_steps,52
+num_parsed_steps,50
+num_evaluated_verdicts,10

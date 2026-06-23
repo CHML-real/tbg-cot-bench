@@ -1,0 +1,14 @@
+scenario_id,step,gold_supports_forward,pred_supports_forward,direction_correct,gold_strength,pred_confidence,confidence_abs_error,text
+SC02,1,True,True,True,0.65,0.85,0.2,Diplomatic records suggest that treaty draft was finalized first.
+SC02,2,True,False,False,0.75,1.0,0.25,The signing ceremony is documented as occurring on Day 3 of negotiations.
+SC02,3,False,True,False,0.8,0.95,0.15,A ceasefire order was radioed to field commanders on Day 2 before the treaty draft finalization (as per previous step).
+SC02,4,False,True,False,0.85,0.75,0.1,The ceasefire took effect before the public ratification of the signed document but after it was drafted and finalized internally by diplomats at a higher level (suggesting internal vs external events).
+SC02,5,False,True,False,0.7,0.85,0.15,Formal signing may have post-dated the operational ceasefire; however this doesn't change chronological order of initial actions leading up to formal signings and declarations alike since they followed sequence dictated by negotiation stages (final draft → ratification).
+SC05,1,True,True,True,0.7,0.95,0.25,"Patent filing application was submitted in Q2, indicating a recent action relative to public disclosure events"
+SC05,2,False,False,True,0.75,0.85,0.1,The competitor's product demonstration occurred before the patent provisionally filed at the end of prior year Q4; they used a different algorithm which complicates direct comparison
+SC05,3,True,False,False,0.65,0.9,0.25,The competitor’s public demo in early part (Q1) is cited by opposing counsel as prior art against the patent filing; this suggests a precedence of disclosure
+SC05,4,True,False,False,0.4,0.85,0.45,The subsequent legal dispute cites these previous disclosures (including Q1 demo) in determining priority and originality claims for the patent filing; this indicates an established chronological order
+SC09,1,True,True,True,0.65,0.95,0.3,HR records show a complaint was filed on October 4th
+SC09,2,False,False,True,0.65,0.85,0.2,The audit committee's minutes reference an existing concern from September before the formal filing of any complaints or audits but not specifying exact dates beyond early October events such as 'pre-existing concerns.'
+SC09,3,False,False,True,0.6,0.8,0.2,The complaint form references an ongoing audit suggesting it came second despite being formally reviewed after initial complaints were made; thus implying that internal audits started prior to receiving any external reports from whistleblowers
+SC09,4,True,False,False,0.6,0.75,0.15,The audit scope was expanded only post-reviewing the whistleblower's complaint suggesting further procedural dependencies implying previous audits had already commenced before receiving external input from whistleblowers

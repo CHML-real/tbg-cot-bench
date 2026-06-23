@@ -1,0 +1,11 @@
+scenario_id,final_p,verdict,last_step
+SC01,0.5,ambiguous,5
+SC02,0.5,backward,5
+SC03,0.5,ambiguous,5
+SC04,0.044,backward,5
+SC05,0.043,backward,6
+SC06,0.5,ambiguous,5
+SC07,0.756,forward,5
+SC08,0.5,ambiguous,5
+SC09,0.5,ambiguous,5
+SC10,0.043,backward,6

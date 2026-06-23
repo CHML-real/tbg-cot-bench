@@ -1,0 +1,4 @@
+scenario_id,final_p,verdict,direction_flips,num_steps
+SC02,0.742691,forward,2,5
+SC05,0.36401,ambiguous,1,4
+SC09,0.359854,ambiguous,1,4

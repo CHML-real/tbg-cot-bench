@@ -1,0 +1,88 @@
+{
+  "id": "SC05",
+  "title": "Noisy Convergence (High Noise) — Patent vs Product Launch",
+  "type": "C",
+  "pattern": "noisy_convergence_high_noise",
+  "hypothesis": "event_a occurred before event_b (heavily contested)",
+  "events": {
+    "event_a": {
+      "id": "event_a",
+      "label": "The algorithm was patented",
+      "era": "Tech IP Dispute"
+    },
+    "event_b": {
+      "id": "event_b",
+      "label": "The competing product launched",
+      "era": "Tech IP Dispute"
+    }
+  },
+  "expected_trajectory": [
+    0.5,
+    0.5764,
+    0.502,
+    0.5793,
+    0.6025,
+    0.6968,
+    0.6346
+  ],
+  "expected_verdict": "ambiguous",
+  "expected_validator_flags": [
+    "contradiction",
+    "missing_evidence"
+  ],
+  "steps": [
+    {
+      "text": "Patent filing records show the application was submitted in Q2.",
+      "supports_forward": true,
+      "strength": 0.7,
+      "source": "legal",
+      "source_weight": 1.1
+    },
+    {
+      "text": "The competitor's product was demonstrated at a conference in Q1.",
+      "supports_forward": false,
+      "strength": 0.75,
+      "source": "factual",
+      "source_weight": 1.0
+    },
+    {
+      "text": "However, the patent was provisionally filed in Q4 of the prior year.",
+      "supports_forward": true,
+      "strength": 0.65,
+      "source": "legal",
+      "source_weight": 1.2
+    },
+    {
+      "text": "The product demo used a different algorithmic approach, making comparison uncertain.",
+      "supports_forward": true,
+      "strength": 0.4,
+      "source": "inference",
+      "source_weight": 0.6
+    },
+    {
+      "text": "Legal filings in the subsequent dispute place the patent as prior art.",
+      "supports_forward": true,
+      "strength": 0.8,
+      "source": "legal",
+      "source_weight": 1.3
+    },
+    {
+      "text": "The opposing counsel contested this, citing the Q1 demo as public disclosure.",
+      "supports_forward": false,
+      "strength": 0.7,
+      "source": "legal",
+      "source_weight": 1.0
+    }
+  ],
+  "benchmark_meta": {
+    "trajectory_formula": "logit(p_t+1)=logit(p_t)+direction*strength*source_weight*learning_rate",
+    "learning_rate": 0.4,
+    "initial_p": 0.5,
+    "verdict_thresholds": {
+      "forward": ">0.65",
+      "backward": "<0.35",
+      "ambiguous": "otherwise"
+    },
+    "label_mode": "gold_manual_labels"
+  }
+}

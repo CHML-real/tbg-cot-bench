@@ -1,0 +1,11 @@
+scenario_id,final_p,verdict,direction_flips,parsed_steps,skipped_steps,total_steps,parse_success_rate
+SC01,0.5,ambiguous,0,0,5,5,0.0
+SC02,0.5,ambiguous,0,0,5,5,0.0
+SC03,0.541266,ambiguous,1,2,3,5,0.4
+SC04,0.5,ambiguous,0,0,5,5,0.0
+SC05,0.5,ambiguous,0,0,6,6,0.0
+SC06,0.5,ambiguous,0,0,5,5,0.0
+SC07,0.5,ambiguous,0,0,5,5,0.0
+SC08,0.5,ambiguous,0,0,5,5,0.0
+SC09,0.5,ambiguous,0,0,5,5,0.0
+SC10,0.5,ambiguous,0,0,6,6,0.0

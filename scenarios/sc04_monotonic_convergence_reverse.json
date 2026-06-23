@@ -1,0 +1,79 @@
+{
+  "id": "SC04",
+  "title": "Monotonic Convergence (Reverse) — Fire Alarm vs Evacuation",
+  "type": "A",
+  "pattern": "monotonic_convergence_reverse",
+  "hypothesis": "event_a occurred before event_b (initial assumption inverted by evidence)",
+  "events": {
+    "event_a": {
+      "id": "event_a",
+      "label": "The fire alarm was triggered",
+      "era": "Building Emergency"
+    },
+    "event_b": {
+      "id": "event_b",
+      "label": "The evacuation began",
+      "era": "Building Emergency"
+    }
+  },
+  "expected_trajectory": [
+    0.5,
+    0.525,
+    0.4217,
+    0.3117,
+    0.221,
+    0.1587
+  ],
+  "expected_verdict": "backward",
+  "expected_validator_flags": [
+    "overconfident_edge"
+  ],
+  "steps": [
+    {
+      "text": "Initial assumption: alarm triggers evacuation, so A before B.",
+      "supports_forward": true,
+      "strength": 0.5,
+      "source": "assumption",
+      "source_weight": 0.5
+    },
+    {
+      "text": "Staff interviews reveal the building manager ordered evacuation before the alarm sounded.",
+      "supports_forward": false,
+      "strength": 0.8,
+      "source": "testimony",
+      "source_weight": 1.3
+    },
+    {
+      "text": "The alarm system log shows a 4-minute delay from when smoke was detected.",
+      "supports_forward": false,
+      "strength": 0.85,
+      "source": "scientific",
+      "source_weight": 1.4
+    },
+    {
+      "text": "Evacuation logs confirm staff were already exiting when the alarm activated.",
+      "supports_forward": false,
+      "strength": 0.9,
+      "source": "factual",
+      "source_weight": 1.3
+    },
+    {
+      "text": "All evidence consistently places evacuation before the alarm.",
+      "supports_forward": false,
+      "strength": 0.85,
+      "source": "inference",
+      "source_weight": 1.2
+    }
+  ],
+  "benchmark_meta": {
+    "trajectory_formula": "logit(p_t+1)=logit(p_t)+direction*strength*source_weight*learning_rate",
+    "learning_rate": 0.4,
+    "initial_p": 0.5,
+    "verdict_thresholds": {
+      "forward": ">0.65",
+      "backward": "<0.35",
+      "ambiguous": "otherwise"
+    },
+    "label_mode": "gold_manual_labels"
+  }
+}

@@ -1,0 +1,5 @@
+metric,value
+direction_accuracy,0.5769
+strength_mae,0.1741
+source_weight_mae,0.1942
+num_steps,52

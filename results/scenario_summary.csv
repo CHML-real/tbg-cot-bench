@@ -1,0 +1,11 @@
+scenario_id,title,type,pattern,num_steps,final_p,verdict,direction_flips,final_conviction,expected_validator_flags
+SC01,Monotonic Convergence — Crime Report,A,monotonic_convergence,5,0.8793,forward,0,0.3793,overconfident_edge
+SC02,Mid-Reasoning Reversal — Treaty vs Ceasefire,B,mid_reversal,5,0.3682,ambiguous,1,0.1318,contradiction
+SC03,Noisy Convergence — King's Death vs Rebellion,C,noisy_convergence,5,0.7484,forward,2,0.2484,missing_evidence|overconfident_edge
+SC04,Monotonic Convergence (Reverse) — Fire Alarm vs Evacuation,A,monotonic_convergence_reverse,5,0.1587,backward,1,0.3413,overconfident_edge
+SC05,Noisy Convergence (High Noise) — Patent vs Product Launch,C,noisy_convergence_high_noise,6,0.6346,ambiguous,3,0.1346,contradiction|missing_evidence
+SC06,Reversal with Weak Recovery — Medical Diagnosis,B,reversal_weak_recovery,5,0.2953,backward,2,0.2047,contradiction|overconfident_edge
+SC07,Monotonic Convergence — Worldbuilding Lore,A,monotonic_convergence,5,0.8514,forward,2,0.3514,overconfident_edge
+SC08,Reversal — Historical Manuscript vs Library,B,reversal,5,0.1815,backward,1,0.3185,contradiction
+SC09,Ambiguous — No Clear Convergence (Whistleblower vs Audit),C,no_convergence,5,0.518,ambiguous,2,0.018,missing_evidence|contradiction
+SC10,Reversal with Strong Recovery — Species Discovery vs Habitat Protection,B,reversal_strong_recovery,6,0.7835,forward,4,0.2835,overconfident_edge

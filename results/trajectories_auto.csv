@@ -1,0 +1,63 @@
+delta,direction_flips,mode,note,p_forward,scenario_id,scenario_title,skipped,step
+0.0,0,auto,,0.5,SC01,Monotonic Convergence — Crime Report,False,0
+0.0,0,auto,ambiguous_direction,0.5,SC01,Monotonic Convergence — Crime Report,True,1
+0.0,0,auto,ambiguous_direction,0.5,SC01,Monotonic Convergence — Crime Report,True,2
+0.0548,0,auto,,0.5548,SC01,Monotonic Convergence — Crime Report,False,3
+0.0482,0,auto,,0.603,SC01,Monotonic Convergence — Crime Report,False,4
+0.0553,0,auto,,0.6583,SC01,Monotonic Convergence — Crime Report,False,5
+0.0,0,auto,,0.5,SC02,Mid-Reasoning Reversal — Treaty vs Ceasefire,False,0
+0.071,0,auto,,0.571,SC02,Mid-Reasoning Reversal — Treaty vs Ceasefire,False,1
+0.0,0,auto,ambiguous_direction,0.571,SC02,Mid-Reasoning Reversal — Treaty vs Ceasefire,True,2
+-0.0491,1,auto,,0.5219,SC02,Mid-Reasoning Reversal — Treaty vs Ceasefire,False,3
+-0.0639,1,auto,,0.458,SC02,Mid-Reasoning Reversal — Treaty vs Ceasefire,False,4
+-0.0228,1,auto,,0.4352,SC02,Mid-Reasoning Reversal — Treaty vs Ceasefire,False,5
+0.0,0,auto,,0.5,SC03,Noisy Convergence — King's Death vs Rebellion,False,0
+0.0,0,auto,ambiguous_direction,0.5,SC03,Noisy Convergence — King's Death vs Rebellion,True,1
+0.0,0,auto,ambiguous_direction,0.5,SC03,Noisy Convergence — King's Death vs Rebellion,True,2
+0.0,0,auto,ambiguous_direction,0.5,SC03,Noisy Convergence — King's Death vs Rebellion,True,3
+-0.0548,0,auto,,0.4452,SC03,Noisy Convergence — King's Death vs Rebellion,False,4
+0.0713,1,auto,,0.5165,SC03,Noisy Convergence — King's Death vs Rebellion,False,5
+0.0,0,auto,,0.5,SC04,Monotonic Convergence (Reverse) — Fire Alarm vs Evacuation,False,0
+0.0349,0,auto,,0.5349,SC04,Monotonic Convergence (Reverse) — Fire Alarm vs Evacuation,False,1
+-0.0798,1,auto,,0.4551,SC04,Monotonic Convergence (Reverse) — Fire Alarm vs Evacuation,False,2
+0.0,1,auto,ambiguous_direction,0.4551,SC04,Monotonic Convergence (Reverse) — Fire Alarm vs Evacuation,True,3
+0.0,1,auto,ambiguous_direction,0.4551,SC04,Monotonic Convergence (Reverse) — Fire Alarm vs Evacuation,True,4
+-0.07,1,auto,,0.3851,SC04,Monotonic Convergence (Reverse) — Fire Alarm vs Evacuation,False,5
+0.0,0,auto,,0.5,SC05,Noisy Convergence (High Noise) — Patent vs Product Launch,False,0
+0.0,0,auto,ambiguous_direction,0.5,SC05,Noisy Convergence (High Noise) — Patent vs Product Launch,True,1
+-0.0494,0,auto,,0.4506,SC05,Noisy Convergence (High Noise) — Patent vs Product Launch,False,2
+0.0558,1,auto,,0.5064,SC05,Noisy Convergence (High Noise) — Patent vs Product Launch,False,3
+0.0,1,auto,ambiguous_direction,0.5064,SC05,Noisy Convergence (High Noise) — Patent vs Product Launch,True,4
+0.0898,1,auto,,0.5962,SC05,Noisy Convergence (High Noise) — Patent vs Product Launch,False,5
+-0.0898,2,auto,,0.5064,SC05,Noisy Convergence (High Noise) — Patent vs Product Launch,False,6
+0.0,0,auto,,0.5,SC06,Reversal with Weak Recovery — Medical Diagnosis,False,0
+0.0494,0,auto,,0.5494,SC06,Reversal with Weak Recovery — Medical Diagnosis,False,1
+0.0693,0,auto,,0.6188,SC06,Reversal with Weak Recovery — Medical Diagnosis,False,2
+-0.0738,1,auto,,0.545,SC06,Reversal with Weak Recovery — Medical Diagnosis,False,3
+0.0,1,auto,ambiguous_direction,0.545,SC06,Reversal with Weak Recovery — Medical Diagnosis,True,4
+0.0,1,auto,ambiguous_direction,0.545,SC06,Reversal with Weak Recovery — Medical Diagnosis,True,5
+0.0,0,auto,,0.5,SC07,Monotonic Convergence — Worldbuilding Lore,False,0
+0.1025,0,auto,,0.6025,SC07,Monotonic Convergence — Worldbuilding Lore,False,1
+0.0729,0,auto,,0.6754,SC07,Monotonic Convergence — Worldbuilding Lore,False,2
+-0.0969,1,auto,,0.5785,SC07,Monotonic Convergence — Worldbuilding Lore,False,3
+0.0,1,auto,ambiguous_direction,0.5785,SC07,Monotonic Convergence — Worldbuilding Lore,True,4
+0.0,1,auto,ambiguous_direction,0.5785,SC07,Monotonic Convergence — Worldbuilding Lore,True,5
+0.0,0,auto,,0.5,SC08,Reversal — Historical Manuscript vs Library,False,0
+0.0793,0,auto,,0.5793,SC08,Reversal — Historical Manuscript vs Library,False,1
+-0.1153,1,auto,,0.4641,SC08,Reversal — Historical Manuscript vs Library,False,2
+0.0,1,auto,ambiguous_direction,0.4641,SC08,Reversal — Historical Manuscript vs Library,True,3
+-0.038,1,auto,,0.426,SC08,Reversal — Historical Manuscript vs Library,False,4
+-0.068,1,auto,,0.358,SC08,Reversal — Historical Manuscript vs Library,False,5
+0.0,0,auto,,0.5,SC09,Ambiguous — No Clear Convergence (Whistleblower vs Audit),False,0
+0.0799,0,auto,,0.5799,SC09,Ambiguous — No Clear Convergence (Whistleblower vs Audit),False,1
+-0.0903,1,auto,,0.4896,SC09,Ambiguous — No Clear Convergence (Whistleblower vs Audit),False,2
+-0.0625,1,auto,,0.4271,SC09,Ambiguous — No Clear Convergence (Whistleblower vs Audit),False,3
+0.0699,2,auto,,0.497,SC09,Ambiguous — No Clear Convergence (Whistleblower vs Audit),False,4
+0.0,2,auto,ambiguous_direction,0.497,SC09,Ambiguous — No Clear Convergence (Whistleblower vs Audit),True,5
+0.0,0,auto,,0.5,SC10,Reversal with Strong Recovery — Species Discovery vs Habitat Protection,False,0
+0.0877,0,auto,,0.5877,SC10,Reversal with Strong Recovery — Species Discovery vs Habitat Protection,False,1
+0.0,0,auto,ambiguous_direction,0.5877,SC10,Reversal with Strong Recovery — Species Discovery vs Habitat Protection,True,2
+0.0753,0,auto,,0.6631,SC10,Reversal with Strong Recovery — Species Discovery vs Habitat Protection,False,3
+0.0517,0,auto,,0.7148,SC10,Reversal with Strong Recovery — Species Discovery vs Habitat Protection,False,4
+0.0,0,auto,ambiguous_direction,0.7148,SC10,Reversal with Strong Recovery — Species Discovery vs Habitat Protection,True,5
+0.0387,0,auto,,0.7535,SC10,Reversal with Strong Recovery — Species Discovery vs Habitat Protection,False,6

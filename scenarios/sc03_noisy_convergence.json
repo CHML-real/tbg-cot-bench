@@ -1,0 +1,80 @@
+{
+  "id": "SC03",
+  "title": "Noisy Convergence — King's Death vs Rebellion",
+  "type": "C",
+  "pattern": "noisy_convergence",
+  "hypothesis": "event_a occurred before event_b (sources conflict)",
+  "events": {
+    "event_a": {
+      "id": "event_a",
+      "label": "The king died",
+      "era": "Medieval Conflict Period"
+    },
+    "event_b": {
+      "id": "event_b",
+      "label": "The rebellion began",
+      "era": "Medieval Conflict Period"
+    }
+  },
+  "expected_trajectory": [
+    0.5,
+    0.5832,
+    0.5419,
+    0.642,
+    0.6814,
+    0.7484
+  ],
+  "expected_verdict": "forward",
+  "expected_validator_flags": [
+    "missing_evidence",
+    "overconfident_edge"
+  ],
+  "steps": [
+    {
+      "text": "The royal chronicle records the king's death on the 14th.",
+      "supports_forward": true,
+      "strength": 0.7,
+      "source": "factual",
+      "source_weight": 1.2
+    },
+    {
+      "text": "A rebel pamphlet dated the 12th suggests the uprising had already started.",
+      "supports_forward": false,
+      "strength": 0.6,
+      "source": "speculative",
+      "source_weight": 0.7
+    },
+    {
+      "text": "Court records confirm the king was present at council on the 13th.",
+      "supports_forward": true,
+      "strength": 0.8,
+      "source": "factual",
+      "source_weight": 1.3
+    },
+    {
+      "text": "Some historians argue the pamphlet was post-dated as propaganda.",
+      "supports_forward": true,
+      "strength": 0.55,
+      "source": "academic",
+      "source_weight": 0.8
+    },
+    {
+      "text": "The consensus in modern historiography places the death first.",
+      "supports_forward": true,
+      "strength": 0.75,
+      "source": "academic",
+      "source_weight": 1.1
+    }
+  ],
+  "benchmark_meta": {
+    "trajectory_formula": "logit(p_t+1)=logit(p_t)+direction*strength*source_weight*learning_rate",
+    "learning_rate": 0.4,
+    "initial_p": 0.5,
+    "verdict_thresholds": {
+      "forward": ">0.65",
+      "backward": "<0.35",
+      "ambiguous": "otherwise"
+    },
+    "label_mode": "gold_manual_labels"
+  }
+}

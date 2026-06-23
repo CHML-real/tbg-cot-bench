@@ -1,0 +1,63 @@
+step,p_forward,delta,direction_flips,skipped,scenario_id,scenario_title,mode
+0,0.5,0.0,0,False,SC01,Monotonic Convergence — Crime Report,gold
+1,0.6087,0.1087,0,False,SC01,Monotonic Convergence — Crime Report,gold
+2,0.7203,0.1116,0,False,SC01,Monotonic Convergence — Crime Report,gold
+3,0.7766,0.0563,0,False,SC01,Monotonic Convergence — Crime Report,gold
+4,0.8255,0.0489,0,False,SC01,Monotonic Convergence — Crime Report,gold
+5,0.8793,0.0538,0,False,SC01,Monotonic Convergence — Crime Report,gold
+0,0.5,0.0,0,False,SC02,Mid-Reasoning Reversal — Treaty vs Ceasefire,gold
+1,0.5582,0.0582,0,False,SC02,Mid-Reasoning Reversal — Treaty vs Ceasefire,gold
+2,0.6374,0.0791,0,False,SC02,Mid-Reasoning Reversal — Treaty vs Ceasefire,gold
+3,0.5369,-0.1004,1,False,SC02,Mid-Reasoning Reversal — Treaty vs Ceasefire,gold
+4,0.4354,-0.1016,1,False,SC02,Mid-Reasoning Reversal — Treaty vs Ceasefire,gold
+5,0.3682,-0.0672,1,False,SC02,Mid-Reasoning Reversal — Treaty vs Ceasefire,gold
+0,0.5,0.0,0,False,SC03,Noisy Convergence — King's Death vs Rebellion,gold
+1,0.5832,0.0832,0,False,SC03,Noisy Convergence — King's Death vs Rebellion,gold
+2,0.5419,-0.0413,1,False,SC03,Noisy Convergence — King's Death vs Rebellion,gold
+3,0.642,0.1001,2,False,SC03,Noisy Convergence — King's Death vs Rebellion,gold
+4,0.6814,0.0394,2,False,SC03,Noisy Convergence — King's Death vs Rebellion,gold
+5,0.7484,0.067,2,False,SC03,Noisy Convergence — King's Death vs Rebellion,gold
+0,0.5,0.0,0,False,SC04,Monotonic Convergence (Reverse) — Fire Alarm vs Evacuation,gold
+1,0.525,0.025,0,False,SC04,Monotonic Convergence (Reverse) — Fire Alarm vs Evacuation,gold
+2,0.4217,-0.1033,1,False,SC04,Monotonic Convergence (Reverse) — Fire Alarm vs Evacuation,gold
+3,0.3117,-0.1099,1,False,SC04,Monotonic Convergence (Reverse) — Fire Alarm vs Evacuation,gold
+4,0.221,-0.0908,1,False,SC04,Monotonic Convergence (Reverse) — Fire Alarm vs Evacuation,gold
+5,0.1587,-0.0623,1,False,SC04,Monotonic Convergence (Reverse) — Fire Alarm vs Evacuation,gold
+0,0.5,0.0,0,False,SC05,Noisy Convergence (High Noise) — Patent vs Product Launch,gold
+1,0.5764,0.0764,0,False,SC05,Noisy Convergence (High Noise) — Patent vs Product Launch,gold
+2,0.502,-0.0744,1,False,SC05,Noisy Convergence (High Noise) — Patent vs Product Launch,gold
+3,0.5793,0.0773,2,False,SC05,Noisy Convergence (High Noise) — Patent vs Product Launch,gold
+4,0.6025,0.0232,2,False,SC05,Noisy Convergence (High Noise) — Patent vs Product Launch,gold
+5,0.6968,0.0943,2,False,SC05,Noisy Convergence (High Noise) — Patent vs Product Launch,gold
+6,0.6346,-0.0622,3,False,SC05,Noisy Convergence (High Noise) — Patent vs Product Launch,gold
+0,0.5,0.0,0,False,SC06,Reversal with Weak Recovery — Medical Diagnosis,gold
+1,0.5597,0.0597,0,False,SC06,Reversal with Weak Recovery — Medical Diagnosis,gold
+2,0.4497,-0.11,1,False,SC06,Reversal with Weak Recovery — Medical Diagnosis,gold
+3,0.3305,-0.1192,1,False,SC06,Reversal with Weak Recovery — Medical Diagnosis,gold
+4,0.2809,-0.0496,1,False,SC06,Reversal with Weak Recovery — Medical Diagnosis,gold
+5,0.2953,0.0144,2,False,SC06,Reversal with Weak Recovery — Medical Diagnosis,gold
+0,0.5,0.0,0,False,SC07,Monotonic Convergence — Worldbuilding Lore,gold
+1,0.6248,0.1248,0,False,SC07,Monotonic Convergence — Worldbuilding Lore,gold
+2,0.7163,0.0915,0,False,SC07,Monotonic Convergence — Worldbuilding Lore,gold
+3,0.7835,0.0672,0,False,SC07,Monotonic Convergence — Worldbuilding Lore,gold
+4,0.7696,-0.0139,1,False,SC07,Monotonic Convergence — Worldbuilding Lore,gold
+5,0.8514,0.0819,2,False,SC07,Monotonic Convergence — Worldbuilding Lore,gold
+0,0.5,0.0,0,False,SC08,Reversal — Historical Manuscript vs Library,gold
+1,0.5582,0.0582,0,False,SC08,Reversal — Historical Manuscript vs Library,gold
+2,0.4241,-0.1341,1,False,SC08,Reversal — Historical Manuscript vs Library,gold
+3,0.327,-0.0971,1,False,SC08,Reversal — Historical Manuscript vs Library,gold
+4,0.2631,-0.0639,1,False,SC08,Reversal — Historical Manuscript vs Library,gold
+5,0.1815,-0.0816,1,False,SC08,Reversal — Historical Manuscript vs Library,gold
+0,0.5,0.0,0,False,SC09,Ambiguous — No Clear Convergence (Whistleblower vs Audit),gold
+1,0.571,0.071,0,False,SC09,Ambiguous — No Clear Convergence (Whistleblower vs Audit),gold
+2,0.5,-0.071,1,False,SC09,Ambiguous — No Clear Convergence (Whistleblower vs Audit),gold
+3,0.4403,-0.0597,1,False,SC09,Ambiguous — No Clear Convergence (Whistleblower vs Audit),gold
+4,0.5,0.0597,2,False,SC09,Ambiguous — No Clear Convergence (Whistleblower vs Audit),gold
+5,0.518,0.018,2,False,SC09,Ambiguous — No Clear Convergence (Whistleblower vs Audit),gold
+0,0.5,0.0,0,False,SC10,Reversal with Strong Recovery — Species Discovery vs Habitat Protection,gold
+1,0.6025,0.1025,0,False,SC10,Reversal with Strong Recovery — Species Discovery vs Habitat Protection,gold
+2,0.5339,-0.0686,1,False,SC10,Reversal with Strong Recovery — Species Discovery vs Habitat Protection,gold
+3,0.6215,0.0876,2,False,SC10,Reversal with Strong Recovery — Species Discovery vs Habitat Protection,gold
+4,0.5847,-0.0368,3,False,SC10,Reversal with Strong Recovery — Species Discovery vs Habitat Protection,gold
+5,0.6938,0.1091,4,False,SC10,Reversal with Strong Recovery — Species Discovery vs Habitat Protection,gold
+6,0.7835,0.0897,4,False,SC10,Reversal with Strong Recovery — Species Discovery vs Habitat Protection,gold
